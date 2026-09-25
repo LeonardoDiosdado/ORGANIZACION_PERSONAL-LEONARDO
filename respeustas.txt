@@ -1,11 +1,34 @@
 1. ¿Cuál es la diferencia entre un repositorio local y uno remoto?
+- Repositorio Local: Se encuentra en tu computadora. Es donde editas código, creas ramas y guardas el historial de cambios de forma privada y offline.
+- Repositorio Remoto: Se aloja en un servidor en la nube (GitHub, GitLab, Bitbucket). Es la copia central compartida donde el equipo sincroniza el proyecto para colaborar.
 
 2. ¿Cuál es la diferencia entre commit y push?
+- commit: Guarda una instantánea (snapshot) de tus cambios en el historial de tu repositorio local. No afecta a la nube ni a otros desarrolladores.
+- push: Envía y sube los commits guardados localmente hacia el repositorio remoto en la nube.
+
 3. ¿Para qué sirve .gitignore?
+Es un archivo donde indicas a Git qué archivos o carpetas debe ignorar y no rastrear. Evita subir por accidente contraseñas, claves de API, archivos temporales del sistema o dependencias pesadas.
+
 4. ¿Por qué .venv no se almacena normalmente en GitHub?
+Porque contiene binarios e instalaciones del entorno virtual de Python específicos para tu sistema operativo y es un directorio muy pesado. En su lugar, se comparte el archivo requirements.txt para que cada usuario genere su propio .venv local.
+
 5. ¿Para qué sirve requirements.txt?
+Es un archivo de texto que enumera las librerías de Python y sus versiones requeridas para el proyecto. Permite reinstalar todas las dependencias en otro entorno usando el comando: pip install -r requirements.txt.
+
 6. ¿Cuál es la diferencia entre fork y clone?
+- Fork: Crea una copia de un repositorio ajeno directamente en tu cuenta de GitHub (en la nube).
+- Clone: Copia un repositorio remoto (tuyo o público) a tu disco duro local para trabajar en él.
+
 7. ¿Por qué conviene crear una rama antes de modificar el proyecto?
+Para aislar las nuevas funcionalidades, correcciones o experimentos sin alterar el código estable de la rama principal (main/master). Si algo falla en la rama, el proyecto base permanece intacto.
+
 8. ¿Qué función cumple un Pull Request?
+Es una solicitud formal para fusionar los cambios de tu rama con la rama principal del repositorio remoto. Permite al equipo revisar el código, hacer comentarios, sugerir cambios y aprobar la integración.
+
 9. ¿Qué se revisa antes de realizar un merge?
+- Que no existan conflictos de código entre las ramas.
+- Que el código cumpla con los estándares del proyecto y pase las pruebas (tests).
+- Que la lógica sea correcta y no introduzca errores ni vulnerabilidades de seguridad.
+
 10. ¿Por qué, después del merge en GitHub, se utiliza git pull en el repositorio local?
+Porque la fusión (merge) ocurrió en el servidor remoto en la nube. Ejecutar git pull descarga e integra esos cambios actualizados en tu máquina local para mantener ambos repositorios alineados.
