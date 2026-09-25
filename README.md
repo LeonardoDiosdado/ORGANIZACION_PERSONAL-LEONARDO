@@ -4,3 +4,5 @@
 • Pasos de instalación (CTRL C CTRL V )
 • Dependencias ( requierements.txt)
 • Autor (leonardo)
+
+Colaboracion: David Salvador Jaramillo Ayala
